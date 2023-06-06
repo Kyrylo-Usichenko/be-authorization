@@ -15,3 +15,4 @@ database();
 
 export const db = client.db('be-authorization');
 export const users = db.collection('Users');
+export const tokens = db.collection('Tokens');
