@@ -2,13 +2,13 @@
   "name": "be-authorization",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/app.ts --platform=node --target=node16 --format=cjs --bundle --minify --main-fields=main --outfile=dist/app.js",
+    "build": "esbuild src/main.ts --platform=node --target=node16 --format=cjs --bundle --minify --main-fields=main --outfile=dist/app.js",
     "server": "node dist/app.js",
     "start": "npm run build && npm run server",
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/main.ts",
+    "lint": "eslint --ext .ts src"
   },
   "author": "Kyrylo Usichenko",
   "license": "ISC",
@@ -37,6 +37,7 @@
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
     "prettier-eslint": "^15.0.1",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
   }
 }

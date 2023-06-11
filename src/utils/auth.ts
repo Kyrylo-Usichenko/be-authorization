@@ -1,4 +1,4 @@
-import { tokens } from '@/database/main';
+import { tokens } from '@/database';
 import jwt from 'jsonwebtoken';
 
 const generateTokens = (login: string) => {
