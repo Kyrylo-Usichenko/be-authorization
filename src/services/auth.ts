@@ -1,9 +1,9 @@
-import { Users } from '@/database/repositories/users';
+import { UsersRepository } from '@/database/repositories/users';
 import { Jwt } from '@/utils/jwt';
 import bcrypt from 'bcryptjs';
 
 export class Auth {
-	constructor(private users: Users, private jwt = new Jwt()) {}
+	constructor(private users: UsersRepository, private jwt = new Jwt()) {}
 
 	async signUp(email: string, password: string) {
 		const user = await this.users.get(email);

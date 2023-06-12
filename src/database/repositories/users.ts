@@ -1,4 +1,4 @@
-export class Users {
+export class UsersRepository {
 	constructor(private collection: any) {}
 
 	create = async (email: string, password: string) => {

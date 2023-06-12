@@ -9,8 +9,8 @@ const client = new MongoClient(uri);
 const database = async () => {
 	await client.connect();
 };
-
 database();
 
 const db = client.db('be-authorization');
 export const usersTable = db.collection('Users');
+export const tokens = db.collection('Tokens');
