@@ -1,11 +1,11 @@
 import { signUpCheck } from '@/middleware/auth';
-import { Auth } from '@/services/auth';
+import { AuthService } from '@/services/auth';
 import { Request, Response } from 'express';
 import { validationResult } from 'express-validator';
 import Controller from '.';
 
 class AuthController extends Controller {
-	constructor(private auth: Auth) {
+	constructor(private auth: AuthService) {
 		super('/auth');
 		this.router.post('/signup', signUpCheck, this.signUp);
 		this.router.post('/login', signUpCheck, this.login);

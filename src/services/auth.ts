@@ -2,7 +2,7 @@ import { UsersRepository } from '@/database/repositories/users';
 import { Jwt } from '@/utils/jwt';
 import bcrypt from 'bcryptjs';
 
-export class Auth {
+export class AuthService {
 	constructor(private users: UsersRepository, private jwt = new Jwt()) {}
 
 	async signUp(email: string, password: string) {
